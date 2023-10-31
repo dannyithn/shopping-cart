@@ -28,7 +28,7 @@ const navItems = [
         name: "Home",
         code: "/"
     }, {
-        name: "Product",
+        name: "School",
         code: "/products/"
     },
     {
@@ -48,7 +48,7 @@ function Header(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{textAlign: "center"}}>
             <Typography variant="h6" sx={{my: 2}}>
-                Shoping Cart
+                School
             </Typography>
             <Divider/>
             <List>
@@ -87,7 +87,7 @@ function Header(props) {
                         component="div"
                         sx={{flexGrow: 1,textAlign: "left", display: {xs: "none", sm: "block"}}}
                     >
-                        Shoping Cart
+                        School
                     </Typography>
                     <Box sx={{display: {xs: "none", sm: "block"}}}>
                         {navItems.map((item) => (
