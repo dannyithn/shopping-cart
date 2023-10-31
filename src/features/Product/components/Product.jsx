@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { STATIC_HOST, THUMBNAIL_PLACEHOLDER } from '../../../constants';
+import { STATIC_HOST_PRODUCT, THUMBNAIL_PLACEHOLDER } from '../../../constants';
 
 const useStyles = makeStyles(theme => ({
     img: {
@@ -16,7 +16,7 @@ Product.propTypes = {
 
 function Product({product}) {
     const classes = useStyles();
-    const thumbnailUrl = product.thumbnail? `${STATIC_HOST}${product.thumbnail.url}` : `${THUMBNAIL_PLACEHOLDER}`;
+    const thumbnailUrl = product.thumbnail? `${STATIC_HOST_PRODUCT}${product.thumbnail.url}` : `${THUMBNAIL_PLACEHOLDER}`;
     return (
         <div>
             <Box padding={1}>

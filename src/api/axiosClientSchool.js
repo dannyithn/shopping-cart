@@ -1,17 +1,19 @@
 import axios from "axios";
-import { STATIC_HOST } from "../constants";
+import { STATIC_HOST_SCHOOL } from "../constants";
+import { TOKEN } from "../constants";
 
-const axiosClient = axios.create({
-    baseURL: `${STATIC_HOST}`,
+const axiosClientSchool = axios.create({
+    baseURL: `${STATIC_HOST_SCHOOL}`,
     headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${TOKEN}`
     }
 });
 
 // Interceptor
 
 // Add a request interceptor
-axiosClient.interceptors.request.use(function (config) {
+axiosClientSchool.interceptors.request.use(function (config) {
     // Do something before request is sent
     return config;
 }, function (error) {
@@ -20,7 +22,7 @@ axiosClient.interceptors.request.use(function (config) {
 });
 
 // Add a response interceptor
-axiosClient.interceptors.response.use(function (response) {
+axiosClientSchool.interceptors.response.use(function (response) {
     // Any status code that lie within the range of 2xx cause this function to trigger
     // Do something with response data
     return response.data;
@@ -30,4 +32,4 @@ axiosClient.interceptors.response.use(function (response) {
     return Promise.reject(error);
 });
 
-export default axiosClient;
+export default axiosClientSchool;

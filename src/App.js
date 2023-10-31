@@ -5,6 +5,7 @@ import ProductFeature from './features/Product';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import Cart from "./features/Cart";
+import School from './features/School/';
 function App() {
   return (
     <div className="App">
@@ -13,7 +14,8 @@ function App() {
         <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/products/" element={<ProductFeature />} />
-          <Route path="/cart/" element={<Cart />} />
+        <Route path="/cart/" element={<Cart />} />
+        <Route path="/school/" element={<School />} />
       </Routes>
     </div>
   );

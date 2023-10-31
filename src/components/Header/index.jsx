@@ -28,10 +28,12 @@ const navItems = [
         name: "Home",
         code: "/"
     }, {
-        name: "School",
+        name: "Products",
         code: "/products/"
-    },
-    {
+    }, {
+        name: "School",
+        code: "/school/"
+    }, {
         name: "Cart",
         code: "/cart/"
     }
